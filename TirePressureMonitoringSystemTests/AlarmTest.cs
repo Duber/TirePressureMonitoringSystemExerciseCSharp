@@ -29,7 +29,7 @@ namespace TDDMicroExercises.TirePressureMonitoringSystemTests
         }
 
         [Test]
-        public void AnAlarmIsOnWhenPressureIsSixteen()
+        public void AnAlarmIsOnWhenPressureIsSixTeen()
         {
             var alarm = new FakeAlarm(16);
 
@@ -39,13 +39,23 @@ namespace TDDMicroExercises.TirePressureMonitoringSystemTests
         }
 
         [Test]
-        public void AnAlarmIsOffWhenPressureIsSeventeen()
+        public void AnAlarmIsOffWhenPressureIsSevenTeen()
         {
             var alarm = new FakeAlarm(17);
 
             alarm.Check();
 
             Assert.AreEqual(false, alarm.AlarmOn);
+        }
+
+        [Test]
+        public void AnAlarmIsOnWhenPressureIsTweentyTwo()
+        {
+            var alarm = new FakeAlarm(22);
+
+            alarm.Check();
+
+            Assert.AreEqual(true, alarm.AlarmOn);
         }
     }
 }
