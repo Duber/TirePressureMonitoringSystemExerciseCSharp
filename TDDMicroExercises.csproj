@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TirePressureMonitoringSystemTests\AlarmTest.cs" />
     <Compile Include="TirePressureMonitoringSystem\Alarm.cs" />
     <Compile Include="TirePressureMonitoringSystem\Sensor.cs" />
   </ItemGroup>
