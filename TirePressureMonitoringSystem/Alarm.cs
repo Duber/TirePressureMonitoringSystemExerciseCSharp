@@ -9,11 +9,6 @@ namespace TDDMicroExercises.TirePressureMonitoringSystem
 
         bool _alarmOn = false;
 
-        public Alarm()
-        {
-            _sensor = new PressureSensor();
-        }
-
         public Alarm(Sensor sensor)
         {
             _sensor = sensor;
