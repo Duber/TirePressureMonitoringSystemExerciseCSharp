@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Moq;
 using TDDMicroExercises.TirePressureMonitoringSystem;
 
 namespace TDDMicroExercises.TirePressureMonitoringSystemTests
@@ -17,7 +18,9 @@ namespace TDDMicroExercises.TirePressureMonitoringSystemTests
 
         public AlarmBuilder WithSensorDetecting(double measure)
         {
-            _sensor = new PressureSensorMock(measure);
+            var sensorMock = new Mock<Sensor>();
+            sensorMock.Setup(s => s.Measure()).Returns(measure);
+            _sensor = sensorMock.Object;
             return this;
         }
 
