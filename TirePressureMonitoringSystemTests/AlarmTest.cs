@@ -37,5 +37,15 @@ namespace TDDMicroExercises.TirePressureMonitoringSystemTests
 
             Assert.AreEqual(true, alarm.AlarmOn);
         }
+
+        [Test]
+        public void AnAlarmIsOffWhenPressureIsSeventeen()
+        {
+            var alarm = new FakeAlarm(17);
+
+            alarm.Check();
+
+            Assert.AreEqual(false, alarm.AlarmOn);
+        }
     }
 }
