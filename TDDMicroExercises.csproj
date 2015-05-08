@@ -47,6 +47,7 @@
     <Compile Include="TirePressureMonitoringSystemTests\AlarmTest.cs" />
     <Compile Include="TirePressureMonitoringSystemTests\PressureSensorMock.cs" />
     <Compile Include="TirePressureMonitoringSystem\Alarm.cs" />
+    <Compile Include="TirePressureMonitoringSystem\MeasureRange.cs" />
     <Compile Include="TirePressureMonitoringSystem\Sensor.cs" />
     <Compile Include="TirePressureMonitoringSystem\PressureSensor.cs" />
   </ItemGroup>

@@ -18,7 +18,7 @@ namespace TDDMicroExercises.TirePressureMonitoringSystemTests
         [Test]
         public void AnAlarmIsOnWhenPressureIsSixTeen()
         {
-            var alarm = new Alarm(new PressureSensorMock(16));
+            var alarm = new Alarm(new PressureSensorMock(16), new MeasureRange(17,21));
 
             alarm.Check();
 
@@ -28,7 +28,7 @@ namespace TDDMicroExercises.TirePressureMonitoringSystemTests
         [Test]
         public void AnAlarmIsOffWhenPressureIsSevenTeen()
         {
-            var alarm = new Alarm(new PressureSensorMock(17));
+            var alarm = new Alarm(new PressureSensorMock(17), new MeasureRange(17, 21));
 
             alarm.Check();
 
@@ -38,7 +38,7 @@ namespace TDDMicroExercises.TirePressureMonitoringSystemTests
         [Test]
         public void AnAlarmIsOnWhenPressureIsTweentyTwo()
         {
-            var alarm = new Alarm(new PressureSensorMock(22));
+            var alarm = new Alarm(new PressureSensorMock(22), new MeasureRange(17, 21));
 
             alarm.Check();
 
