@@ -22,7 +22,7 @@ namespace TDDMicroExercises.TirePressureMonitoringSystemTests
 
             alarm.Check();
 
-            Assert.AreEqual(true, alarm.AlarmOn);
+            Assert.AreEqual(true, alarm.IsOn);
         }
 
         [Test]
@@ -32,7 +32,7 @@ namespace TDDMicroExercises.TirePressureMonitoringSystemTests
 
             alarm.Check();
 
-            Assert.AreEqual(false, alarm.AlarmOn);
+            Assert.AreEqual(false, alarm.IsOn);
         }
 
         [Test]
@@ -42,7 +42,7 @@ namespace TDDMicroExercises.TirePressureMonitoringSystemTests
 
             alarm.Check();
 
-            Assert.AreEqual(true, alarm.AlarmOn);
+            Assert.AreEqual(true, alarm.IsOn);
         }
     }
 }

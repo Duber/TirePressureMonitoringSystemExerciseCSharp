@@ -7,7 +7,7 @@ namespace TDDMicroExercises.TirePressureMonitoringSystem
 
         readonly Sensor _sensor;
 
-        bool _alarmOn = false;
+        bool _isOn = false;
 
         public Alarm(Sensor sensor)
         {
@@ -16,17 +16,17 @@ namespace TDDMicroExercises.TirePressureMonitoringSystem
 
         public void Check()
         {
-            double psiPressureValue = _sensor.PopNextPressurePsiValue();
+            double measure = _sensor.Measure();
 
-            if (psiPressureValue < LowPressureThreshold || HighPressureThreshold < psiPressureValue)
+            if (measure < LowPressureThreshold || HighPressureThreshold < measure)
             {
-                _alarmOn = true;
+                _isOn = true;
             }
         }
 
-        public bool AlarmOn
+        public bool IsOn
         {
-            get { return _alarmOn; }
+            get { return _isOn; }
         }
 
     }

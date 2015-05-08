@@ -14,7 +14,7 @@ namespace TDDMicroExercises.TirePressureMonitoringSystemTests
             _pressure = pressure;
         }
 
-        public double PopNextPressurePsiValue()
+        public double Measure()
         {
             return _pressure;
         }
